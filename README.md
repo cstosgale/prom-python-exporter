@@ -1,18 +1,13 @@
-# Example Prometheus Instrumentation for Python
+# Docker container for running a Python Exporter for Prometheus
 
-This is a quick example of how to instrument your Flask-based Python app
-with the Python Prometheus client.
+This project provides you with a docker container which can be used to run python code as a prometheus exporter.
 
 This project is built with:
 
-- Python 3.6.x
+- The latest python version
+- The latest prometheus-client version, installed via pip
 
-And is packaged as a Docker container. The two top level dependencies are:
-
-- Flask==0.12.2
-- prometheus-client==0.0.21
-
-See the [requirements file](./requirements.txt) for more details.
+And is packaged as a Docker container.
 
 ## Prometheus
 
@@ -20,21 +15,16 @@ See the [requirements file](./requirements.txt) for more details.
 [Cloud Native](https://winderresearch.com/what-is-cloud-native/?utm_source=github&utm_medium=web&utm_content=link)
 monitoring application.
 
-To instrument our Python code we need to manipulate the metrics each
-time a new HTTP request is received.
-
-See [the application](./app.py) for more details.
-
 ## Building
-
-This project is automatically built by Docker Automated Builds.
 
 To build manually:
 
-`docker build -t python-app .`
+`docker build -t prom-python-exporter .`
 
 ## Running
 
-Simply open port 5000 when running as a container:
+Simply open port 8000 when running as a container:
 
-`docker run -p 5000:5000 --name python-app philwinder/prometheus-python`
+`docker run -p 8000:8000 --name prom-python-exporter cstosgale/prom-python-exporter`
+
+When the app runs, it will attempt to run ./app.py, this is your python file. Be sure to redirect this to your file outside the container in order for it to run your code.
