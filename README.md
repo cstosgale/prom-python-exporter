@@ -1,11 +1,11 @@
 # Docker container for running a Python Exporter for Prometheus
 
-This project provides you with a docker container which can be used to run python code as a prometheus exporter.
+This project provides you with a docker container which can be used to run python code.
 
 This project is built with:
 
 - The latest python version
-- The latest prometheus-client version, installed via pip
+- Any additional packages you require, please modify the requirements.txt file to adjust what is included
 
 And is packaged as a Docker container.
 
@@ -25,6 +25,6 @@ To build manually:
 
 Simply open port 8000 when running as a container:
 
-`docker run -p 8000:8000 --name prom-python-exporter cstosgale/prom-python-exporter`
+`docker run -p 8000:8000 --name python-docker cstosgale/python-docker`
 
-When the app runs, it will attempt to run ./app.py, this is your python file. Be sure to redirect this to your file outside the container in order for it to run your code.
+When the app runs, it will attempt to run /app.py, this is your python file. Be sure to redirect this to your file outside the container in order for it to run your code.
