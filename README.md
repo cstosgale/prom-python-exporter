@@ -1,6 +1,6 @@
-# Docker container for running a Python Exporter for Prometheus
+# Docker container for running a Python Script
 
-This project provides you with a docker container which can be used to run python code.
+This project provides you with a docker container which can be used to run python code. It includes building it with any required libraries installed via pip.
 
 This project is built with:
 
@@ -13,7 +13,7 @@ And is packaged as a Docker container.
 
 To build manually:
 
-`docker build -t prom-python-exporter .`
+`docker build -t python-docker .`
 
 ## Running
 
