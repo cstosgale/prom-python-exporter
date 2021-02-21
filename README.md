@@ -9,12 +9,6 @@ This project is built with:
 
 And is packaged as a Docker container.
 
-## Prometheus
-
-[Prometheus](https://prometheus.io/) is a
-[Cloud Native](https://winderresearch.com/what-is-cloud-native/?utm_source=github&utm_medium=web&utm_content=link)
-monitoring application.
-
 ## Building
 
 To build manually:
