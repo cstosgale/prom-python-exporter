@@ -13,7 +13,7 @@ And is packaged as a Docker container.
 
 To build manually:
 
-`docker build -t python-docker .`
+`docker build -t cstosgale/python-docker .`
 
 ## Running
 
