@@ -21,4 +21,4 @@ Simply open port 8000 when running as a container:
 
 `docker run -p 8000:8000 --name python-docker cstosgale/python-docker`
 
-When the app runs, it will attempt to run /app.py, this is your python file. Be sure to redirect this to your file outside the container in order for it to run your code.
+When the app runs, it will attempt to run /bin/app.py, this is your python file. Be sure to redirect this to your file outside the container in order for it to run your code.
